@@ -1,0 +1,30 @@
+{% extends "pages/page01.html" %}
+
+{% block content %}
+<br>
+<br>
+<div class="container">
+<a href="http://127.0.0.1:8000/list" class="btn btn-primary">Black</a>
+
+<br>
+<br>
+<br>
+       <h1 class="mb-4">{{object.title}}</h1>
+            <div class="post-meta">
+                        <span class="category">{{object.categories}}</span>
+                        <span class="mr-2">{{object.date}} </span> &bullet;
+            </div>
+            <div class="post-content-body">
+            <p>{{object.body}}</p>
+            <div class="row mb-5">
+              <div class="col-md-12 mb-12 element-animate">
+                  <h1 text align="center"><img src="{{object.image.url}}" alt="Image placeholder" style="border-radius:10px;  " class="img-fluid"width="400px" height="500px" ></div></h1>
+              </div>
+            </div>
+            </div>
+            <div class="pt-5">
+              <p text align="center">Categories:  <a href="#">{{object.categories}}</a></p>
+            </div>
+
+    </div>
+{% endblock %}
